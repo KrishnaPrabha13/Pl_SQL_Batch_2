@@ -96,6 +96,7 @@ BEGIN
     END IF; 
 END;
 
+
 --Trigger
 CREATE OR REPLACE TRIGGER employee4_insert_update
  BEFORE INSERT OR UPDATE ON employee4
@@ -107,3 +108,10 @@ CREATE OR REPLACE TRIGGER employee4_insert_update
 
 select * from employee4;
 
+--Delete
+CREATE  procedure del;
+IS
+BEGIN
+    delete from employee4 where emp_id=1;
+commit;
+end;
